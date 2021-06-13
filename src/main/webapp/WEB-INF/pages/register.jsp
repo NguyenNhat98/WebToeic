@@ -7,7 +7,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Laptop Shop - Đăng ký</title>
+<title>Web Toeic - Đăng ký</title>
 <link rel="stylesheet" href="<c:url value='/css/login.css' />">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

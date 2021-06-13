@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import com.querydsl.core.BooleanBuilder;
 import com.webtoeic.entities.BaiTapNghe;
 import com.webtoeic.entities.CauHoiBaiTapNghe;
-import com.webtoeic.entities.QBaiTapNghe;
+//import com.webtoeic.entities.QBaiTapNghe;
 import com.webtoeic.repository.BaiTapNgheRepository;
 import com.webtoeic.util.ExcelUtil;
 
@@ -41,13 +41,13 @@ public class BaiTapNgheService {
 	public Page<BaiTapNghe> findAllListBaiTapNgheByPartAndDoKhoAdmin(int page, int size, String part, String doKho) {
 		BooleanBuilder builder = new BooleanBuilder();
 
-		if (!part.equals("")) {
-			builder.and(QBaiTapNghe.baiTapNghe.part.eq(Integer.parseInt(part)));
-		}
-		
-		if (!doKho.equals("")) {
-			builder.and(QBaiTapNghe.baiTapNghe.doKho.eq(Integer.parseInt(doKho)));
-		}
+		/*
+		 * if (!part.equals("")) {
+		 * builder.and(QBaiTapNghe.baiTapNghe.part.eq(Integer.parseInt(part))); }
+		 * 
+		 * if (!doKho.equals("")) {
+		 * builder.and(QBaiTapNghe.baiTapNghe.doKho.eq(Integer.parseInt(doKho))); }
+		 */
 		
 		return baiTapNgheRepo.findAll(builder, PageRequest.of(page - 1, size));
 	}

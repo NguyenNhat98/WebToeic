@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import com.querydsl.core.BooleanBuilder;
 import com.webtoeic.entities.BaiTapDoc;
 import com.webtoeic.entities.CauHoiBaiTapDoc;
-import com.webtoeic.entities.QBaiTapDoc;
+//import com.webtoeic.entities.QBaiTapDoc;
 import com.webtoeic.repository.BaiTapDocRepository;
 import com.webtoeic.util.ExcelUtilDoc;
 
@@ -39,14 +39,13 @@ public class BaiTapDocService {
 	public Page<BaiTapDoc> findAllListBaiTapDocByPartAndDoKhoAdmin(int page, int size, String part, String doKho) {
 		BooleanBuilder builder = new BooleanBuilder();
 
-		if (!part.equals("")) {
-			builder.and(QBaiTapDoc.baiTapDoc.part.eq(Integer.parseInt(part)));
-		}
-		
-		if (!doKho.equals("")) {
-			builder.and(QBaiTapDoc.baiTapDoc.doKho.eq(Integer.parseInt(doKho)));
-		}
-		
+		/*
+		 * if (!part.equals("")) {
+		 * builder.and(QBaiTapDoc.baiTapDoc.part.eq(Integer.parseInt(part))); }
+		 * 
+		 * if (!doKho.equals("")) {
+		 * builder.and(QBaiTapDoc.baiTapDoc.doKho.eq(Integer.parseInt(doKho))); }
+		 */
 		return baiTapDocRepo.findAll(builder, PageRequest.of(page - 1, size));
 	}
 

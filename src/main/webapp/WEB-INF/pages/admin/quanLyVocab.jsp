@@ -63,7 +63,7 @@ function showMyImage(fileInput) {
         <tr>
           <th>ID</th>
           
-          <th>Tên bài từ vựng</th>
+          <th>Tên bài từ vựng </th>
           
           <th>Ảnh</th>
           

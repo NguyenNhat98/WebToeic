@@ -135,7 +135,8 @@ $(document).ready(function(){
 //				soCau = result.totalElements;
 				$.each(result.content, function(i, cauHoi){
 					var stt = cauHoi.soThuTu;
-					var divGiaiThich = '<div class="postmetadata" style="text-align: center"><ul><li><i class="icon-user"></i>Câu '+ stt ;
+					var cauhoi = cauHoi.cauHoi;
+					var divGiaiThich = '<div class="postmetadata" style="text-align: center"><ul><li><i class="icon-user"></i>Câu '+ stt + ': ' + cauhoi ;
 					if(soCauDung.indexOf(stt) > -1){
                     	console.log(soCauDung.indexOf(stt) > -1)
                     	divGiaiThich += " - <span>ĐÚNG</span><br>";
